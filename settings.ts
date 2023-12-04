@@ -15,9 +15,9 @@ export interface AttachmentManagementPluginSettings {
 export const DEFAULT_SETTINGS: AttachmentManagementPluginSettings = {
   attachmentRoot: "",
   saveAttE: "",
-  attachmentPath: '${path}/${notename}',
-  imageFormat: 'IMG-${date}',
-  dateFormat: 'YYYYMMDDHHmmssSSS',
+  attachmentPath: 'themes/pure/source/images',
+  imageFormat: '../../images/${notename}_${date}',
+  dateFormat: 'ssSSS',
   autoRenameFolder: true,
   autoRenameFiles: false,
 }

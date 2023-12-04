@@ -1,8 +1,8 @@
 {
 	"id": "attachment-management",
-	"name": "Attachment Management",
+	"name": "Luhao's Attachment",
 	"version": "0.8.7",
-	"description": "Customize your attachment path of notes independently with variables and auto rename it on change.",
+	"description": "Modified from trganda and thanks him/her~",
 	"author": "trganda",
 	"authorUrl": "https://github.com/trganda",
 	"isDesktopOnly": false

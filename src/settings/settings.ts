@@ -70,12 +70,12 @@ export interface AttachmentManagementPluginSettings {
 export const DEFAULT_SETTINGS: AttachmentManagementPluginSettings = {
     attachPath: {
         attachmentRoot: "",
-        saveAttE: `${SETTINGS_ROOT_OBSFOLDER}`,
-        attachmentPath: `${SETTINGS_VARIABLES_NOTEPATH}/${SETTINGS_VARIABLES_NOTENAME}`,
-        attachFormat: `IMG-${SETTINGS_VARIABLES_DATES}`,
+        saveAttE: `${SETTINGS_ROOT_INFOLDER}`,
+        attachmentPath: 'themes/pure/source/images',
+        attachFormat: '../../images/${notename}_${date}',
         type: SETTINGS_TYPES.GLOBAL,
     },
-    dateFormat: "YYYYMMDDHHmmssSSS",
+    dateFormat: "ssSSS",
     excludeExtensionPattern: "",
     autoRenameAttachment: true,
     excludedPaths: "",

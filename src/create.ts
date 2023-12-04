@@ -102,7 +102,8 @@ export class CreateHandler {
         activeFile: TFile,
         updateLink?: boolean
     ) {
-        const dst = normalizePath(path.join(attachPath, attachName));
+        const _attachName = path.basename(attachName);
+        const dst = normalizePath(path.join(attachPath, _attachName));
         debugLog("renameFile - ", file.path, " to ", dst);
 
         const oldLinkText = this.app.fileManager.generateMarkdownLink(file, activeFile.path);
@@ -133,7 +134,8 @@ export class CreateHandler {
         let val = "";
         switch (activeFile.extension) {
             case "md":
-                val = content.replace(oldLinkText, newLinkText);
+                const _newLinkText = newLinkText.replace(_attachName, attachName);
+                val = content.replace(oldLinkText, _newLinkText);
                 break;
             case "canvas":
                 val = content.replace(`/(file\s*\:\s*\")${oldPath}(\")/g`, `$1${dst}$2`);
